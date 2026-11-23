@@ -29,7 +29,6 @@ uploaded_file = st.file_uploader(
 )
 
 
-# Keep previous results during Streamlit reruns
 if "scan_result" not in st.session_state:
     st.session_state.scan_result = None
 
@@ -66,7 +65,6 @@ if uploaded_file:
             }
 
 
-# Display stored results
 result = st.session_state.scan_result
 
 if result is not None:
