@@ -2,19 +2,11 @@
 from ultralytics import YOLO
 import cv2
 
-# Load pretrained YOLO model
+# Load model
 model = YOLO("yolo11n.pt")
 
 
 def detect_objects(image, confidence=0.35):
-    """
-    Detect objects in an image.
-
-    Returns:
-        annotated_image: image with bounding boxes
-        detections: list of detected objects
-    """
-
     results = model.predict(
         source=image,
         conf=confidence,
